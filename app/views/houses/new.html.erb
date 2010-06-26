@@ -1,0 +1,69 @@
+<h2>Add a new house to rent</h2>
+
+<% form_for @house do |f| %>
+<%= f.error_messages %>
+
+  <%= javascript_include_tag :defaults %>
+  <%= collection_select(nil , :country_id , @countries , :id , :country ,
+                      {:prompt => "Select a country"} ,
+                      {:onchange => "#{remote_function(:url => {:action => "update_states"} ,
+                                                      :with => "'country_id='+value")}"}) %>
+   <br />
+   <div id="states">
+   <%= render :partial => 'states' , :object => @states %>                                                    
+   </div>
+   
+   <div id ="cities">
+   <%= render :partial => 'cities' , :object => @cities %>
+   </div>
+
+  <div class="field">
+    <%= f.label :address , "Full Address" %><br />
+    <%= f.text_area :address %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :built_area , "Built area in sq ft"  %><br />
+    <%= f.text_field :built_area %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :rent  , "Expected Rent"%><br />
+    <%= f.text_field :rent %>
+  </div>  
+ 
+  <div class="field">
+    <%= f.label :housetype , "Type of house"  %>
+    <%= select("house", "housetype_id", Housetype.find(:all).collect {|w|  [w.housetype ,w.id] }, { :include_blank => true }) %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :bedrooms , "No of Bedrooms"%>
+    <%= select("house", "bedroom_id", Bedroom.find(:all).collect {|w|  w.bedroom }, { :include_blank => true }) %>
+  </div>  
+  
+  <div class="field">
+    <%= f.label :furnishing  %>
+    <%= select("house", "furnishing_id", Furnishing.find(:all).collect {|w|  [w.status ,w.id] }, { :include_blank => true }) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :tagline %><br />
+    <%= f.text_field :tagline %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :description , "Short description" %><br />
+    <%= f.text_area :description %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Put for rent" %>
+  </div>
+  
+  <% end %>  

@@ -1,0 +1,5 @@
+<%= collection_select(nil , :state_id , states , :id , :state , 
+                      {:prompt => "Select a state"} , 
+                      {:onchange => "#{remote_function(:url => {:action => "update_cities"} ,
+                                                        :with => "'state_id='+value")}" } ) %>
+                                                        

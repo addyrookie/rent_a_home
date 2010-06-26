@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
   
   before_save :encrypt_password
   
+  def remember_me!
+    self.remember_token = encrypt("#{salt}--#{id}")
+  end  
+  
   def self.authenticate(email , submitted_password)
     user = self.find_by_email(email)
     return nil if user.nil?
