@@ -1,0 +1,157 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+ol { padding-left: 1.4em; list-style: decimal; }
+ul { padding-left: 1.4em; list-style:square; }
+q:before, q:after { content:''; }
+
+
+
+
+/*house index page layout */
+
+#house_list{
+margin-left: 100px;
+padding-left: 40px;
+margin-right: 20px;
+font-size: 1.1em;
+border: 2px solid #300;
+}
+
+
+#location , #built_area , #rent {
+padding-top: 5px;
+padding-bottom: 5px;
+border-bottom: 2px solid #00B;
+}
+
+#location {
+padding-left: 40px;
+padding-right: 20px;
+background-color: #F00;
+}
+
+#built_area   {
+padding-left: 100px;
+padding-right: 10px;
+background-color: #0F0;
+}
+
+#rent {
+padding-left: 10px;
+padding-right: 10px;
+background-color: #00F;
+}
+
+.location {
+padding-left: 40px;
+padding-right: 20px;
+background-color: #ABC;
+}
+
+.built_area {
+text-align: right;
+padding-left: 20px;
+padding-right: 20px;
+background-color: #925;
+}
+
+.rent{
+text-align: center ;
+background-color: #4A6;
+}
+
+.location , .built_area , .rent{
+border-bottom: 2px solid #000;
+}
+
+
+/*navigation bar css styling*/
+
+
+
+/*ul.navigation{*/
+/*list-style: none;*/
+/*padding-left: 0;*/
+/*padding-right: 0;*/
+/*margin-left: 0;*/
+/*margin-right: 0;*/
+/*margin-left: 33em;*/
+/*padding-top: 6px;*/
+/*padding-bottom: 5px;*/
+
+
+/*}*/
+
+/*ul.navigation li{*/
+/*float: right;*/
+/*}*/
+
+/*ul.navigation a{*/
+/*border: 1px dashed #000;*/
+/*border-bottom: none;*/
+/*padding: 5px 15px 5px 15px;*/
+
+/*margin-right: 5px;*/
+/*background-color: #25A5FF;*/
+/*text-decoration: none;*/
+/*color: #333;*/
+/*}*/
+
+
+
+
+.round {
+  -moz-border-radius:    5px;
+  -webkit-border-radius: 8px;
+}
+
+
+
+.navigation{
+float: right;
+background-color: #BBB;
+padding-bottom: 0.1em;
+white-space: nowrap;
+
+}
+
+ul.navigation{
+margin: 0;
+}
+
+.navigation li{
+list-style-type: none;
+display:  inline;
+padding: 0.2em 0 ;
+font-size: 1.03em;
+} 
+
+.navigation a {
+padding: 0 5px;
+
+}
+
+.navigation li a:visited {
+  color: #09c;
+}
+.navigation li a:hover {
+  text-decoration: underline;
+}
+
+
+
+#header{
+margin-right: 50px;
+margin-top: 5px;
+}
+
+#first_list_item {
+margin-left: -20px;
+}

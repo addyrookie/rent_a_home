@@ -19,7 +19,7 @@
 
   <div class="field">
     <%= f.label :address , "Full Address" %><br />
-    <%= f.text_area :address %>
+    <%= f.text_area :address  %>
   </div>  
   
   <div class="field">
@@ -43,7 +43,7 @@
   </div>  
   
   <div class="field">
-    <%= f.label :bedrooms , "No of Bedrooms"%>
+    <%= f.label :bedrooms , "No of rooms"%>
     <%= select("house", "bedroom_id", Bedroom.find(:all).collect {|w|  w.bedroom }, { :include_blank => true }) %>
   </div>  
   

@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   
   def remember_me!
     self.remember_token = encrypt("#{salt}--#{id}")
+    save_without_validation
   end  
   
   def self.authenticate(email , submitted_password)

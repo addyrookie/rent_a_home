@@ -1,0 +1,18 @@
+<h2>list of houses</h2>
+<div class="house_list">
+    <span id="location">Location</span>
+    <span id="built_area">Built up area</span>
+    <span id="rent">Expected rent</span>
+    
+  
+  
+  
+  <% @houses.each do |h| %>
+  <div>
+    <span class="location"><%= h.location %></span>
+    <span class="built_area"><%= h.built_area %></span>
+    <span class="rent"><%= h.rent %></span>
+    
+  </div>
+  <% end %>
+</div>    

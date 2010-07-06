@@ -9,10 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100626115530) do
+ActiveRecord::Schema.define(:version => 20100704162012) do
 
   create_table "bedrooms", :force => true do |t|
     t.integer  "bedroom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bids", :force => true do |t|
+    t.integer  "house_id"
+    t.integer  "user_id"
+    t.integer  "boli"
+    t.boolean  "accepted",   :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -74,6 +83,8 @@ ActiveRecord::Schema.define(:version => 20100626115530) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_token"
+    t.boolean  "admin"
   end
 
 end
